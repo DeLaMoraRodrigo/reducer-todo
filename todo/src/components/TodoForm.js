@@ -1,4 +1,27 @@
 import React, { useState } from "react";
+import styled from "styled-components";
+
+const ClearButton = styled.button `
+    width: 200px;
+    height: 6vh;
+    border: 3px solid black;
+`;
+
+const AddButton = styled.button `
+    width: 100px;
+    height: 4vh;
+    border: 3px solid black;
+`;
+
+const SuperH1 = styled.h1 `
+    font-size: 5rem;
+`;
+
+const SuperInput = styled.input `
+    margin-bottom: 3vh;
+    width: 300px;
+    height: 3vh;
+`;
 
 const TodoForm = ({ dispatch }) => {
   const [item, setItem] = useState("");
@@ -26,18 +49,18 @@ const TodoForm = ({ dispatch }) => {
   return (
     <div className="container">
       <form onSubmit={submitForm}>
-        <h2>TODO LIST</h2>
+        <SuperH1>TODO LIST</SuperH1>
         <div className="topOfForm">
           <div className="addTodo">
-            <input
+            <SuperInput
               name="todo"
               onChange={handleChanges}
               value={item}
               placeholder="Add New Todo..."
             />
-            <button className="btn">Add</button>
+            <AddButton className="btn">Add</AddButton>
           </div>
-          <button onClick={clearCompleted}>Clear Completed</button>
+          <ClearButton onClick={clearCompleted}>Clear Completed</ClearButton>
         </div>
       </form>
     </div>
