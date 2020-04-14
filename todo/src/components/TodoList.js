@@ -1,7 +1,7 @@
 import React, { useReducer } from "react";
 
 import { reducer, todo } from "../reducers/reducer";
-import Todo from "./Todos";
+import Todo from "./Todo";
 import TodoForm from "./TodoForm";
 
 const TodoList = props => {

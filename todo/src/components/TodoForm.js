@@ -47,10 +47,9 @@ const TodoForm = ({ dispatch }) => {
   };
 
   return (
-    <div className="container">
+    <div>
       <form onSubmit={submitForm}>
-        <SuperH1>TODO LIST</SuperH1>
-        <div className="topOfForm">
+        <SuperH1>TODO LIST</SuperH1>  
           <div className="addTodo">
             <SuperInput
               name="todo"
@@ -61,7 +60,6 @@ const TodoForm = ({ dispatch }) => {
             <AddButton className="btn">Add</AddButton>
           </div>
           <ClearButton onClick={clearCompleted}>Clear Completed</ClearButton>
-        </div>
       </form>
     </div>
   );
